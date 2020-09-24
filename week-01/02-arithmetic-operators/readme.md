@@ -87,4 +87,4 @@ soma += 20; // 30
 // A expressão acima é equivalente á:
 // soma = soma + 20
 ````
-**Obs:**O exemplo acima vale para os outros operadores aritméticos, como subtração, divisão e multiplicação.
+**Obs:** O exemplo acima vale para os outros operadores aritméticos, como subtração, divisão e multiplicação.
