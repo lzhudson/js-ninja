@@ -37,3 +37,5 @@ var x = 3;
 -x; // -3
 -'3'; // 3
 ```
+
+**Obs:** Tanto o operador unário **+** e **-**, eles apenas convertem o valor mas não atualizam o mesmo.
