@@ -50,20 +50,14 @@ sexo; // o
 
 Com Operador Ternário:
 ```javascript
-var pessoa = {
-	sexo: 'Masculino';
-}
-var sexo = pessoa.sexo === 'Feminino' ? 'a' : 'o';
-sexo; // o
+var isNumber = 1 ? 'é numero' : 'não é numero';
 ```
 Com if:
 ```javascript
-var sexo = 'o';
-var pessoa = {
-	sexo: 'Masculino';
+var isNumber;
+if(1) {
+	isNumber = 'é numero';
+} else {
+	isNumber = 'não é numero';
 }
-if(pessoa.sexo === 'Feminino') {
-	sexo = 'a';
-}
-sexo; // o
 ```
