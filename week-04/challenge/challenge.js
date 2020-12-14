@@ -27,6 +27,10 @@ isTruthy('Hudson');
 isTruthy([]);
 isTruthy({});
 isTruthy(true);
+isTruthy('0');
+isTruthy(function(){});
+isTruthy(20 * 20);
+isTruthy({ a: 1, b: 2 });
 
 
 /*
