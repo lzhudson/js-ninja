@@ -111,14 +111,16 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 carro.adicionarPessoas = function(numPessoas) {
-	if(carro.quantidadePessoas === carro.assentos) {
-		return 'O carro já está lotado!';
+	var totalPessoas = carro.quantidadePessoas + numPessoas;
+	if(carro.quantidadePessoas >= carro.assentos && totalPessoas >= carro.assentos) {
+		return "O carro já está lotado";
 	}
-	if(numPessoas > carro.assentos - carro.quantidadePessoas) {
-		return 'Só cabem mais ' + (carro.assentos - carro.quantidadePessoas) + ' pessoas!';
+	if(totalPessoas > carro.assentos) {
+		var totalDePessoasQueCabem = carro.assentos - carro.quantidadePessoas;
+		return "Só cabe" + (totalDePessoasQueCabem === 1 ? '' : 'm') + " mais " + totalDePessoasQueCabem + " pessoa" + (totalDePessoasQueCabem === 1 ? '' : 's') + "!";
 	}
 	carro.quantidadePessoas += numPessoas;
-	return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
+	return "Já temos " + carro.quantidadePessoas + " pessoas no carro!";
 }
 
 /*
@@ -151,17 +153,16 @@ carro.obterMarcaModelo();
 // Esse carro é uma BMW M4
 
 // Adicione 2 pessoas no carro.
-// carro.adicionarPessoas(2);
-
+carro.adicionarPessoas(2);
 
 // Adicione mais 4 pessoas no carro.
-// carro.adicionarPessoas(4);
+carro.adicionarPessoas(4);
 
 // Faça o carro encher.
 carro.adicionarPessoas(5);
 
 // Tire 4 pessoas do carro.
-carro.quantidadePessoas -= 4;
+carro.adicionarPessoas(-4);
 
 // Adicione 10 pessoas no carro.
 carro.adicionarPessoas(10);
