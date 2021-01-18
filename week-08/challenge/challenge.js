@@ -58,29 +58,27 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
 */
 function calculator(operator) {
 	return function(a, b) {
-		return function(){
-			var result;
-			switch(operator) {
-				case '+':
-					result = a + b;
-				break;
-				case '-':
-					result = a - b;
-				break;
-				case '*':
-					result = a * b;
-				break;
-				case '/':
-					result = a / b;
-				break;
-				case '%':
-					result = a % b;
-				break;
-				default: 	
-					return "Operação Inválida."
-			} 
-			return "Resultado da operação: " + a + " " + operator + " " + b + " = " + result + ".";
-		}
+		var result;
+		switch(operator) {
+			case '+':
+				result = a + b;
+			break;
+			case '-':
+				result = a - b;
+			break;
+			case '*':
+				result = a * b;
+			break;
+			case '/':
+				result = a / b;
+			break;
+			case '%':
+				result = a % b;
+			break;
+			default: 	
+				return "Operação Inválida."
+		} 
+		return "Resultado da operação: " + a + " " + operator + " " + b + " = " + result + ".";
 	}
 }
 
