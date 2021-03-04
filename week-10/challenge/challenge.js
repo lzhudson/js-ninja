@@ -71,13 +71,11 @@ function calculator(operator) {
 	if(!isOperatorValid(operator)) {
 		return false;
 	}
-	if(isOperatorValid(operator)) {
-		return function(num1, num2) {
-			if(typeof num1 !== 'number' || typeof num2 !== 'number') {
+	return function(num1, num2) {
+		if(typeof num1 !== 'number' || typeof num2 !== 'number') {
 				return false;
-			}
-			return operation[operator](num1, num2);
 		}
+		return operation[operator](num1, num2);
 	}
 }
 
